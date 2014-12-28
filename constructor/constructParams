@@ -1,0 +1,7 @@
+{
+  "target":"",
+  "minOverlap":5, # Minimum overlap between strands to be joined.
+  "maxOverlap":8, # Maximum overlap.
+  "maxOligoLength":70, # Maximum length of starting oligos.
+  "maxDeviation":5 # Farthest the division point can be from the center of a sequence.
+}

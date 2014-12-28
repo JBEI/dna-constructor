@@ -1,0 +1,95 @@
+<head>
+<title>JBEI DNA Constructor</title>
+</head>
+<span style="font-size:large">JBEI DNA Constructor </span> <br> <br>
+<style>
+</style>
+
+<script src="/static/jquery-1.5.2.min.js"></script>
+<script src="/static/json2.js"></script>
+
+<br> What is your minimum primer length?
+<input id="minLengthText" type="text" />
+<br> What is your maximum primer length?
+<input id="maxLengthText" type="text" />
+<br>
+<br> Enter a DNA Sequence:
+<input id="sequenceText" type="text" />
+<input id="sequenceButton" type="submit" />
+<br> Or Enter The URL Of a FASTA File:
+<input id="linkText" type="text" />
+<input id="linkButton" type="submit" />
+
+<div id="loading">
+    <br>
+    <b>Please Wait...</b>
+    <br>
+    <img src="static/ajax-loader.gif" />
+</div>
+
+<div id="responseDiv">
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('#loading').hide()
+    $('#sequenceText').keyup(function(event){
+      if (event.keyCode == 13){
+        $('#sequenceButton').click();
+      }
+    });
+    $('#linkButton').keyup(function(event){
+      if (event.keyCode == 13){
+        $('#linkButton').click();
+      }
+    });
+    $('#sequenceButton').click(onSequenceSend);
+    $('#linkButton').click(onLinkSend);
+  });
+
+  function onLinkSend() {
+    link = $('#linkText').val();
+    minLength = $('#minLengthText').val();
+    maxLength = $('#maxLengthText').val();
+    
+    $('#responseDiv').html("");
+    
+    $('#loading').show();
+    
+    $.ajax({
+      url:'ajax/',
+      type:'POST',
+      data:({link: link, minLength: minLength, maxLength: maxLength}),
+      success: writeResponse
+    });
+  }
+  
+  function writeResponse(response) {
+    var respObj = JSON.parse(response);
+    $('#loading').hide();
+    if(respObj.text){
+        $('#responseDiv').html("Best Left Primer Size: "+respObj.leftsize+" bp, score: "+respObj.leftscore+"\nBest Right Primer Size: "+respObj.rightsize+" bp, score: "+respObj.rightscore+" bp.\n");
+    }
+    else {
+        $('#responseDiv').html("There are no valid primers for the given range.");
+    }
+  }
+  
+  function onSequenceSend() {
+    sequence = $('#sequenceText').val();
+    minLength = $('#minLengthText').val();
+    maxLength = $('#maxLengthText').val();
+    
+    $('#responseDiv').html("");
+    
+    $('#loading').show();
+    
+    $.ajax({
+      url:'ajax/',
+      type:'POST',
+      data:({sequence: sequence, minLength: minLength, maxLength: maxLength}),
+      success: writeResponse
+    });
+  }
+
+</script>

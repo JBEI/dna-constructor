@@ -1,0 +1,8 @@
+1. Check case where two natural fragments are right next to each other and so don't have overlap
+	(could generate primers which have overlaps in them, or generate a separate adaptor sequence which overlaps with both)
+2. Get combinatorial generation working with natural fragments
+3. Work on graphical display of where natural fragments come from
+	(display sequence with list of color coded natural fragments)
+4. Get primer3 verification working
+5. Check case where natural fragment has no valid primers
+6. Write a manual

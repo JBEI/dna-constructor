@@ -1,0 +1,9 @@
+{
+"seq_one":template,
+"minPrimerLength":35,
+"maxPrimerLength":60,
+"threeprimeLength":8, # length of the 3' region of primer
+"maxThreeprime":5, # maximum allowable matches in 3' region of primer
+"maxThreeprimeGap":0, # max allowable gap for 3' matches to be counted as consecutive
+"numSteps":2 # number of recursive division steps to make when splitting template
+}

@@ -1,0 +1,132 @@
+from constructor.models import Protocol, SequenceVariable
+from errors import InterpreterError
+import simplejson as json
+
+"""This file interprets input from the user."""
+
+def parseString(string, paramsDict):
+    string = string.replace(' ', '').replace('"', "'")
+    input = string.split()
+    input = [item.split('=', 1) for item in input]
+    
+    global targets
+    global variables
+    global protocol
+    
+    targets = []
+    variables = dict()
+    
+    protocolList = []#Protocol.objects.filter(definition=string).filter(params=json.dumps(paramsDict))
+    
+    if len(protocolList) > 0:
+        protocol = protocolList[0]
+        return (protocol, protocol.name, protocol.id, True)
+    protocol = Protocol()    
+    protocol.definition = string
+    protocol.params = json.dumps(paramsDict)
+    protocol.save()
+
+    if input[0][0] == 'Name' or input[0][0] == 'name':
+        protocol.name = input[0][1]
+        execute(input[1:])
+        
+    elif input[0][0] == 'raw':
+        return (input[0][1].split(','), protocol.id, protocol.id, False)
+        
+    else:
+        protocol.name = str(protocol.id)
+        execute(input)
+    
+    newTargets = targets
+    targets = []
+
+    if len(newTargets) == 0:
+        error = 'No target specified.\nPlease use the "targets" command to specify a target/targets.'
+        raise InterpreterError(error, protocol.id)
+
+    protocol.target = newTargets
+    protocol.save()
+    
+    return (newTargets, protocol.name, protocol.id, False)
+    
+def execute(input):   
+    for line in input:
+        if line[0] == 'targets':
+            saveTargets(line[1])
+        else:
+            saveSequences(line[0], line[1])
+
+def saveTargets(statement):
+    for term in statement.split(','):
+        targets.append({'sequence':evalStatement(term), 'name':term if term.find("'") == -1 else 'NOTAVARIABLE'})
+
+def saveSequences(name, statement):
+    sequence = evalStatement(statement)
+    variables[name] = sequence
+    
+    seq = SequenceVariable()
+    seq.name = name
+    seq.sequence = sequence
+    seq.protocol = protocol
+    seq.save()
+    
+def evalStatement(statement):
+    sequence = ''
+    for term in statement.split('+'):
+        if term[0] == "'":
+            toAdd = term[1:len(term) - 1].replace("U", "T").replace("u", "t")
+            sequence += toAdd
+            
+        elif term.find('(') != -1:
+            sequence += parseParentheses(term)
+            
+        elif term.find('[') != -1:
+            sequence += parseBrackets(term)
+            
+        else:
+            sequence += getVar(term)
+    
+    return sequence
+
+def parseParentheses(term):
+    variableNameEndIndex = term.index('(')
+    variable = getVar(term[0: variableNameEndIndex])
+    
+    insideParen = term[term.index('(') + 1: term.index(')')]
+    replaceStart = int(insideParen[1: insideParen.index('-')])
+    
+    if insideParen.index('-') + 1 != term.index(']'):
+        replaceEnd = int(insideParen[insideParen.index('-') + 1: insideParen.index(']')])
+    
+    else:
+        replaceEnd = len(insideParen) - 1
+    
+    replaceWith = evalStatement(insideParen[insideParen.index('=') + 1:])
+    
+    return variable[0:replaceStart] + replaceWith + variable[replaceEnd + 1:]
+
+def parseBrackets(term):
+    variableNameEndIndex = term.index('[')
+    variableName = term[0: variableNameEndIndex]
+    variable = getVar(variableName)
+    
+    startIndex = int(term[term.index('[') + 1: term.index('-')])
+    
+    if term.index('-') + 1 != term.index(']'):
+        endIndex = int(term[term.index('-') + 1: term.index(']')])
+    
+    else:
+        endIndex = len(variable) - 1
+
+    if endIndex > len(variable) - 1:
+        raise InterpreterError('Index ' + str(endIndex) + ' of variable ' + variableName + ' is out of bounds.', protocol.id)
+    
+    return variable[startIndex:endIndex + 1]
+
+def getVar(name):
+    try:
+        var = variables[name]
+        return var
+    except(KeyError):
+        raise InterpreterError('Variable "' + name + '" does not exist.', protocol.id)
+    

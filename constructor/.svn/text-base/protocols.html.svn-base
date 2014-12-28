@@ -1,0 +1,17 @@
+<html>
+<link rel="stylesheet" type="text/css" href="/static/jquery-ui-1.8.14.custom.css" />
+<script src="/static/jquery-1.5.2.min.js"></script>
+<script src="/static/jquery-ui-1.8.14.custom.min.js"></script>
+
+<div id="parent">
+  <div id="protocols">
+    {% for protocol in protocols %}
+      <h3><a href="#"> {{ protocol.name }} </a></h3>
+      <div>
+        Definition Code: "{{ protocol.definition }}"<br>
+        Parameters: "{{ protocol.params }}"
+      </div>
+    {% endfor %}
+  </div>
+</div>
+</html>

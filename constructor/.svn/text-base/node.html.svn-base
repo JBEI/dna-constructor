@@ -1,0 +1,54 @@
+<div style="word-wrap:break-word">
+<h1>
+{% if queryNode.isLeaf or queryNode.isRoot %} {{ queryNode.name }} Details
+{% else %} {{ queryNode.name }} Reaction Details {% endif %}</h1>
+<br>
+<br>
+
+{% if not queryNode.isLeaf %}
+  <b>Reaction Target:</b>
+{% else %}
+  <b>Oligo Sequence:</b>
+{% endif %}
+<br><span id="partSequence"> {{ queryNode.target|slice:":30" }}... </span>
+<span id="fullSequence" style="display:none;"> {{ queryNode.target }} </span>
+<a href="#" id="expandSequence" onclick="expandSequence()">+</a><br>
+<b>Target Length:</b> {{ queryNode.target|length }}<br><br>
+
+{% if queryNode.forwardPrimer != "False" %}
+  <b>Forward Primer Sequence:</b><br> {{ queryNode.forwardPrimer.sequence }}<br>
+  <b>Forward Primer Size:</b> {{ queryNode.forwardPrimer.size }}<br><br>
+{% endif %}
+
+{% if queryNode.reversePrimer != "False" %}
+  <b>Reverse Primer Sequence:</b><br> {{ queryNode.reversePrimer.sequence }}<br>
+  <b>Reverse Primer Size:</b> {{ queryNode.reversePrimer.size }}<br><br>
+{% endif %}
+
+<b>Start Index:</b> {{ queryNode.startIndex }}<br>
+<b>Division Point:</b> {{ queryNode.divPoint }}<br>
+<b>Tree Depth:</b> {{ queryNode.treeDepth }}<br>
+<b>Protocol Id:</b> {{ queryNode.protocol.id }}<br>
+
+{% if queryNode.isNaturalFragment %}
+  <br><b>This sequence is a natural fragment.</b>
+{% endif %}
+</div>
+
+<script>
+  function expandSequence() {
+    var elem = document.getElementById('fullSequence');
+    
+    if (elem.style.display == "none") {
+      elem.style.display = "";
+      document.getElementById('partSequence').style.display="none";
+      document.getElementById('expandSequence').innerHTML = "-";
+    }
+      
+    else {
+      elem.style.display = "none";
+      document.getElementById('partSequence').style.display="";
+      document.getElementById('expandSequence').innerHTML = "+";
+    }
+  }
+</script>
