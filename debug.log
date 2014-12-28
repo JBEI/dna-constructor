@@ -254,3 +254,219 @@ startindex: 182, endindex: 248, fragments: False
 startindex: 219, endindex: 321, fragments: False
 startindex: 219, endindex: 284, fragments: False
 startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 20:44:43 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 20:44:57 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 20:52:41 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 20:54:04 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 21:10:01 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 21:26:54 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 21:28:09 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 22:18:54 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 22:19:18 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 22:19:58 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 22:20:31 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
+
+NEW PROTOCOL REQUEST AT Sat Dec 27 22:20:50 2014 with targets [Seq('CAGGCTAAGGGCACGCCTGCTTGGGCGTCGCGCTTCGTCTCTCTCCTGCCAATG...CGC', DNAAlphabet())]
+
+startindex: 0, endindex: 321, fragments: False
+startindex: 0, endindex: 175, fragments: False
+startindex: 0, endindex: 102, fragments: False
+startindex: 0, endindex: 65, fragments: False
+startindex: 36, endindex: 102, fragments: False
+startindex: 73, endindex: 175, fragments: False
+startindex: 73, endindex: 138, fragments: False
+startindex: 109, endindex: 175, fragments: False
+startindex: 146, endindex: 321, fragments: False
+startindex: 146, endindex: 248, fragments: False
+startindex: 146, endindex: 211, fragments: False
+startindex: 182, endindex: 248, fragments: False
+startindex: 219, endindex: 321, fragments: False
+startindex: 219, endindex: 284, fragments: False
+startindex: 255, endindex: 321, fragments: False
