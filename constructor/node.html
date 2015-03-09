@@ -41,7 +41,7 @@
 </div>
 
 <script>
-  $j('.generatePrimer3ReportLink').click(generateReport, '{{queryNode.target}}', '{{queryNode.forwardPrimer.sequence}}', '{{queryNode.reversePrimer}}');
+  $j('.generatePrimer3ReportLink').click(generateReport.bind(null, '{{queryNode.target}}', '{{queryNode.forwardPrimer.sequence}}', '{{queryNode.reversePrimer}}'));
   function expandSequence() {
     var elem = document.getElementById('fullSequence');
     
