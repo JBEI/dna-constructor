@@ -4,7 +4,6 @@ var dotData; // DOT-language representation of the graph
 
 $j(document).ready(function () {
   $j('#exportDiv').hide();
-  $j('#primerReport').hide();
   $j('#addFragmentDiv').hide();
   $j('#addFragmentLink').click(function() {
     $j('#fragmentText').val('');
@@ -45,7 +44,6 @@ $j(document).ready(function () {
   });
   $j('#sequenceButton').click(onSequenceSend);
   $j('#protocolsLink').click(showProtocols);
-  $j('#primerReport').click(generateReport);
 });
 
 function setConstructDefaults() {
@@ -79,14 +77,20 @@ function showProtocols() {
   $j('#showProtocols').jqmShow();
 }
 
-function generateReport() {
+function generateReport(target, forward, reverse) {
   $j.ajax({
     url:'ajax/report/',
     type:'POST',
-    data:({id: protocolID, maxPrimerLength: maxLength, minPrimerLength: minLength}),
+    data:({
+        target: target,
+        forwardPrimer: forward,
+        reversePrimer: reverse,
+        maxPrimerLength: maxLength,
+        minPrimerLength: minLength
+    }),
     success: function(response) {
       respObj = JSON.parse(response);
-      $j('#report').html(respObj.stdout);
+      $j('#reportHTML').html(respObj.stdout);
     }
   });
 }
@@ -124,7 +128,6 @@ function writeResponse(response) {
     $j('#responseDiv').children('div').css('z-index', 2);
     $j('#responseDiv').show();
     $j('#exportDiv').show();
-    $j('#primerReport').show();
   }
 }
 

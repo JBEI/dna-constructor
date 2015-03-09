@@ -15,12 +15,12 @@
 <a href="#" id="expandSequence" onclick="expandSequence()">+</a><br>
 <b>Target Length:</b> {{ queryNode.target|length }}<br><br>
 
-{% if queryNode.forwardPrimer != "False" %}
+{% if queryNode.forwardPrimer != "False" and queryNode.forwardPrimer.length > 0 %}
   <b>Forward Primer Sequence:</b><br> {{ queryNode.forwardPrimer.sequence }}<br>
   <b>Forward Primer Size:</b> {{ queryNode.forwardPrimer.size }}<br><br>
 {% endif %}
 
-{% if queryNode.reversePrimer != "False" %}
+{% if queryNode.reversePrimer != "False" and queryNode.reversePrimer.length > 0 %}
   <b>Reverse Primer Sequence:</b><br> {{ queryNode.reversePrimer.sequence }}<br>
   <b>Reverse Primer Size:</b> {{ queryNode.reversePrimer.size }}<br><br>
 {% endif %}
@@ -33,9 +33,15 @@
 {% if queryNode.isNaturalFragment %}
   <br><b>This sequence is a natural fragment.</b>
 {% endif %}
+
+<a class='generatePrimer3ReportLink' href='#'>
+    <b>Generate Primer3 Report</b>
+</a>
+<div id='reportHTML'></div>
 </div>
 
 <script>
+  $j('.generatePrimer3ReportLink').click(generateReport, '{{queryNode.target}}', '{{queryNode.forwardPrimer.sequence}}', '{{queryNode.reversePrimer}}');
   function expandSequence() {
     var elem = document.getElementById('fullSequence');
     
