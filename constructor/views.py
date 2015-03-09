@@ -107,22 +107,22 @@ def report(request):
 	p3process.stdin.write('PRIMER_TASK=check_primers\n')
 	p3process.stdin.write('PRIMER_MAX_SIZE=' + request.POST['maxPrimerLength'] + '\n')
 
-    p3process.stdin.write('SEQUENCE_TEMPLATE=' + request.POST['target'] + '\n')
-    
-    if len(pairDict['forwardPrimer']) < 35:
-        forwardPrimer = request.POST['forwardPrimer']
-    else:
-        forwardPrimer = request.POST['forwardPrimer'][len(request.POST['forwardPrimer']) - 35:]
+	p3process.stdin.write('SEQUENCE_TEMPLATE=' + request.POST['target'] + '\n')
+	
+	if len(pairDict['forwardPrimer']) < 35:
+		forwardPrimer = request.POST['forwardPrimer']
+	else:
+		forwardPrimer = request.POST['forwardPrimer'][len(request.POST['forwardPrimer']) - 35:]
 
-    if len(pairDict['reversePrimer']) < 35:
-        forwardPrimer = request.POST['reversePrimer']
-    else:
-        forwardPrimer = request.POST['reversePrimer'][len(request.POST['reversePrimer']) - 35:]
+	if len(pairDict['reversePrimer']) < 35:
+		forwardPrimer = request.POST['reversePrimer']
+	else:
+		forwardPrimer = request.POST['reversePrimer'][len(request.POST['reversePrimer']) - 35:]
 
-    p3process.stdin.write('SEQUENCE_PRIMER=' + forwardPrimer + '\n')
-    p3process.stdin.write('=\n')
-    p3process.stdin.write('SEQUENCE_PRIMER_REVCOMP=' + reversePrimer + '\n')
-    p3process.stdin.write('=\n')
+	p3process.stdin.write('SEQUENCE_PRIMER=' + forwardPrimer + '\n')
+	p3process.stdin.write('=\n')
+	p3process.stdin.write('SEQUENCE_PRIMER_REVCOMP=' + reversePrimer + '\n')
+	p3process.stdin.write('=\n')
 	
 	result, stderr = p3process.communicate()
 	return HttpResponse(simplejson.dumps({'stdout':result}))
