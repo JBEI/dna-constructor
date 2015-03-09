@@ -48,7 +48,9 @@ def createProtocol(paramsDict, seq_type, sequences, name, id):
 		align = AlignIO.read(child.stdout, 'clustal')
 		
 		commonIndices, targets = get_common_indices(align, 50)
-		
+
+		logger.debug("\ngot common indices " + str(commonIndices) + ", targets= " + str(targets))
+
 		treeList = []
 		
 		for sequence in targets:
