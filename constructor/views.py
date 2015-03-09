@@ -33,6 +33,14 @@ def construct(request):
 	c = Context({'form': form})
 	return HttpResponse(t.render(c))
 
+def disclaimer(request):
+	t = loader.get_template('constructor/disclaimer.html')
+	return HttpResponse(t.render())
+
+def copyright(request):
+	t = loader.get_template('constructor/copyright.html')
+	return HttpResponse(t.render())
+
 def gvreturn(request, gv_id):
 	f = open(gv_id+'.gv')
 	data = f.read()

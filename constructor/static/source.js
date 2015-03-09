@@ -77,7 +77,7 @@ function showProtocols() {
   $j('#showProtocols').jqmShow();
 }
 
-function generateReport(target, forward, reverse) {
+function generateReport(target, forward, reverse, e) {
   $j.ajax({
     url:'ajax/report/',
     type:'POST',
@@ -93,6 +93,7 @@ function generateReport(target, forward, reverse) {
       $j('#reportHTML').html(respObj.stdout);
     }
   });
+  e.preventDefault();
 }
 
 function edgeClick(id) {

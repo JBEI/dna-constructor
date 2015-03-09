@@ -15,4 +15,6 @@ urlpatterns=patterns('',
     url(r'^construct/(?P<gv_id>\w+).gv', 'constructor.views.gvreturn'),
     url(r'^construct/$', 'constructor.views.construct'),
     url(r'^construct/#', 'constructor.views.construct'),
+    url(r'^copyright', 'constructor.views.copyright'),
+    url(r'^disclaimer', 'constructor.views.disclaimer')
 )
