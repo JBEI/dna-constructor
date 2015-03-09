@@ -115,9 +115,9 @@ def report(request):
 		forwardPrimer = request.POST['forwardPrimer'][len(request.POST['forwardPrimer']) - 35:]
 
 	if len(request.POST['reversePrimer']) < 35:
-		forwardPrimer = request.POST['reversePrimer']
+		reversePrimer = request.POST['reversePrimer']
 	else:
-		forwardPrimer = request.POST['reversePrimer'][len(request.POST['reversePrimer']) - 35:]
+		reversePrimer = request.POST['reversePrimer'][len(request.POST['reversePrimer']) - 35:]
 
 	p3process.stdin.write('SEQUENCE_PRIMER=' + forwardPrimer + '\n')
 	p3process.stdin.write('=\n')
